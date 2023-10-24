@@ -1,79 +1,128 @@
-![thumbnail](https://user-images.githubusercontent.com/16558205/180779213-ea740975-3df1-460a-a964-0a623ee25872.png)
+# A React Portfolio Template for GitHub
 
-### Live - https://react-portfolio-template.netlify.app/
+[![GitHub Repo stars](https://img.shields.io/github/stars/mshuber1981/github-react-portfolio-template?color=%2361dbfb&style=for-the-badge&logo=github)](https://github.com/mshuber1981/github-react-portfolio-template/stargazers/) [![GitHub Repo Forks](https://img.shields.io/github/forks/mshuber1981/github-react-portfolio-template?color=%2361dbfb&style=for-the-badge&logo=github&label=Forks)](https://github.com/mshuber1981/github-react-portfolio-template/network/members)
 
-### Demo Video - https://www.youtube.com/watch?v=62_HLbx2zLQ&t=9s
+A performant, accessible, progressive React portfolio template that uses the [GitHub REST API](https://docs.github.com/en/free-pro-team@latest/rest).
 
-### Tutorials
+Add your GitHub username once and all of your info will automatically be updated. Deploy to GitHub pages in a few simple steps.
 
-Youtube - https://www.youtube.com/watch?v=8cmJ2kR4SpM
+## [Live Demo](https://mshuber1981.github.io/github-react-portfolio-template/#/)
 
-Blog - https://blog.chetanverma.com/how-to-build-a-portfolio-website-using-nextjs-and-tailwindcss
+[Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)
 
-### Features - 
+![Page Speed](/README_images/speed.png)
 
-- Modern Stack (Next.js + TailwindCSS)
-- Minimal Design
-- Easy To Browse
-- Easy To Customize your details With GUI
-- Blog Crud (Create, Read, Update, Delete blog with easy to use UI).
-- Dark Mode
+## Light And Dark Themes
 
+![Hero Light](/README_images/hero.png)
 
-### Sections
+![Hero Dark](/README_images/heroDark.png)
 
-- Header
-- Work
-- Services
-- About
-- Contact
-- Markdown Blog
+### Getting Started
 
+1. [Create a repository from this template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
+2. [Clone your repository](https://developers.google.com/speed/pagespeed/insights/)
+3. Make sure [Node](https://nodejs.org/en/) is installed
+4. Open your project and install the dependencies
 
-### How To Use
+   ```bash
+   npm install
+   ```
 
-- Clone this repo
-- run `yarn`
-- `yarn dev`
+5. Navigate to the src directory and open data.js
+6. Add your GitHub username ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L17) lines 17-21)
 
+   ```javascript
+   /* START HERE
+   ************************************************************** 
+     Add your GitHub username (string - "YourUsername") below.
+   */
+   export const githubUsername = "Your GitHub username here";
+   ```
 
-### How To Deploy - 
+7. Start the development server to view the results
 
-- There are many ways to Deploy this repo.
-- here we are gonna use netlify
-- Login into netlify with github
-- after login select the forked repo or the repo you want to deploy
-- after selecting netlify will automatially deploy your website.
+   ```bash
+   npm start
+   ```
 
-Quickes way to deploy this repo - 
+### Updating the Projects section
 
-[![Deploy To Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/chetanverma16/react-portfolio-template)
+![Projects](/README_images/projects.png)
 
+1. Follow the instructions to update the filteredProjects array ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L91) lines 91-95)
 
-### How To Contribute - 
+   ```javascript
+   /* Projects
+   ************************************************************** 
+     List the repo names (string - "your-repo-name") you want to include (they will be sorted alphabetically). If empty, only the first 3 will be included.
+   */
+   export const filteredProjects = ["example-1", "example-2", "example-3"];
+   ```
 
-I would be very happy to review your PRs and all the awesome things that you can improve on this portfolio.
+2. Import the projects images you want to use ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L7) lines 7-8) or the default image will be applied
 
+   ```javascript
+   // Projects Images (add your images to the images directory and import below)
+   import Logo from "./images/logo.svg";
+   ```
 
-### Tech Stack Used - 
-- Next.js
-- TailwindCSS
+3. Follow the instructions to update the projectCardImages array ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L97) lines 97-103)
 
+   ```javascript
+   // Replace the defualt GitHub image for matching repos below (images imported above - lines 7-8)
+   export const projectCardImages = [
+     {
+       name: "example-1",
+       image: Logo,
+     },
+   ];
+   ```
 
-### Thanks
+### Updating the Contact section
 
-If you liked this portfolio template, don't forget to give it a ⭐.
+![Projects](/README_images/contact.png)
 
-## Awesome Contributors
-[@Aryan3212](https://github.com/Aryan3212) [@achu-krishna](https://github.com/achu-krishna)
+1. The contact form uses [Formspree](https://formspree.io/), create an account and add your endpoint URL ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L105) lines 105-110)
 
-## Supporting
-Many hours of hard work have gone into this project. Your support will be very appreciated!
+   ```javascript
+   /* Contact Info
+   ************************************************************** 
+     Add your formspree endpoint below.
+     https://formspree.io/
+   */
+   export const formspreeUrl = "https://formspree.io/f/YourEndpoint";
+   ```
 
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/chetanverma)
+### Deploy
 
+A helpful guide for Create React App deployments with GitHub Pages can be found [here](https://create-react-app.dev/docs/deployment#github-pages).
 
+1. Update the homepage value ([package.json](https://github.com/mshuber1981/github-react-portfolio-template/blob/0133fcc02ab048fefcf73825d02385ffe27c3721/package.json#L3) line 3)
 
+   ```json
+   "homepage": "https://YourUsername.github.io/your-app/",
+   ```
 
+2. Run the deploy command
 
+   ```bash
+   npm run deploy
+   ```
 
+### Customization Options
+
+Checkout the [Wiki](https://github.com/mshuber1981/github-react-portfolio-template/wiki) for additional customization options:
+
+- [Updating the Hero images](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-Hero-images)
+- [Add a custom Blog icon](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-Hero-images#add-a-custom-blog-icon)
+- [Updating the About Me section](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-About-Me-section)
+- [Updating the Skills section](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-Skills-section)
+- [Add a link to your resume](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-Skills-section#add-a-link-to-your-resume)
+- [Updating the Navbar Logo](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-Navbar-Logo)
+
+[Back to top :top:](#a-react-portfolio-template-for-github)
+
+### License
+
+[MIT](https://choosealicense.com/licenses/mit/)
