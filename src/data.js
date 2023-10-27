@@ -7,6 +7,10 @@ import { Icon } from "@iconify/react";
 // Projects Images (add your images to the images directory and import below)
 import Logo from "./images/logo.svg";
 import Booki from "./images/booki_logo.png";
+import Kasa from "./images/kasa.png";
+import Sophie from "./images/sophie_bluel.png";
+import Grimoire from "./images/mon_vieux_grimoire.png";
+import Nina from "./images/nina_carducci.jpeg";
 
 
 
@@ -102,6 +106,25 @@ export const projectCardImages = [
     name: "projet_booki",
     image: Booki,
   },
+  {
+    name: "mon-vieux-grimoire",
+    image: Grimoire,
+  },
+  {
+    name: "Nina_Carducci_Photographe",
+    image: Nina,
+  },  {
+    name: "Portfolio-architecte-sophie-bluel",
+    image: Sophie,
+  },
+  {
+    name: "kasa",
+    image: Kasa,
+  },
+
+
+
+
 ];
 
 /* Contact Info

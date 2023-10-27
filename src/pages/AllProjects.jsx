@@ -199,6 +199,7 @@ export default function AllProjects() {
                       html_url,
                       homepage,
                     }) {
+                      if (name === "dileksafter.github.io") return []
                       return (
                         <Col key={id}>
                           <StyledCard
@@ -219,6 +220,7 @@ export default function AllProjects() {
                       html_url,
                       homepage,
                     }) {
+                      if (name === "dileksafter.github.io") return []
                       return (
                         <Col key={id}>
                           <StyledCard

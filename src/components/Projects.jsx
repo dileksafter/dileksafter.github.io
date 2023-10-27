@@ -65,8 +65,9 @@ export default function Projects() {
           )}
           {mainProjects.length !== 0 && (
             <>
+            
               <Row xs={1} md={2} lg={3} className="g-4 justify-content-center">
-                {mainProjects.map(function ({
+                {mainProjects.flatMap(function ({
                   id,
                   image,
                   name,
@@ -74,6 +75,7 @@ export default function Projects() {
                   html_url,
                   homepage,
                 }) {
+                  if (name === "dileksafter.github.io") return []
                   return (
                     <Col key={id}>
                       <StyledCard
