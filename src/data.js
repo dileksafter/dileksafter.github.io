@@ -95,6 +95,10 @@ export const filteredProjects = ["mon-vieux-grimoire", "Nina_Carducci_Photograph
 // Replace the defualt GitHub image for matching repos below (images imported above - lines 7-8)
 export const projectCardImages = [
   {
+    name: "example-1",
+    image: Logo,
+  },
+  {
     name: "projet_booki",
     image: Booki,
   },
