@@ -6,6 +6,9 @@ import { Icon } from "@iconify/react";
 
 // Projects Images (add your images to the images directory and import below)
 import Logo from "./images/logo.svg";
+import Booki from "./images/booki_logo.png";
+
+
 
 // Hero Images (add your images to the /images directory with the same names)
 import HeroLight from "./images/hero-light.jpg";
@@ -69,11 +72,6 @@ export const skillData = [
     name: "Styled Components",
   },
   {
-    id: 7,
-    skill: <Icon icon="akar-icons:redux-fill" className="display-4" />,
-    name: "Redux",
-  },
-  {
     id: 8,
     skill: <Icon icon="bi:git" className="display-4" />,
     name: "Git",
@@ -97,8 +95,8 @@ export const filteredProjects = ["mon-vieux-grimoire", "Nina_Carducci_Photograph
 // Replace the defualt GitHub image for matching repos below (images imported above - lines 7-8)
 export const projectCardImages = [
   {
-    name: "example-1",
-    image: Logo,
+    name: "projet_booki",
+    image: Booki,
   },
 ];
 
