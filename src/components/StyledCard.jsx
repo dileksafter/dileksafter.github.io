@@ -12,9 +12,9 @@ const StyledCardComponent = styled.div`
     color: ${({ theme }) => theme.color};
     background: ${({ theme }) => (theme.name === "light" ? "" : "#797B7B")};
     box-shadow: ${({ theme }) =>
-      theme.name === "light"
-        ? "0 3px 10px rgb(0 0 0 / 0.2)"
-        : "0 3px 10px rgb(255 255 255 / 0.2)"};
+    theme.name === "light"
+      ? "0 3px 10px rgb(0 0 0 / 0.2)"
+      : "0 3px 10px rgb(255 255 255 / 0.2)"};
 
     .card-link {
       text-decoration: none;

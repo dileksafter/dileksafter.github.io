@@ -5,7 +5,7 @@ import { Icon } from "@iconify/react";
 // import newLogo from "./images/yourFileName"
 
 // Projects Images (add your images to the images directory and import below)
-import Logo from "./images/logo.svg";
+// import Logo from "./images/logo.svg";
 import Booki from "./images/booki_logo.png";
 import Kasa from "./images/kasa.png";
 import Sophie from "./images/sophie_bluel.png";
@@ -99,25 +99,27 @@ export const filteredProjects = ["mon-vieux-grimoire", "Nina_Carducci_Photograph
 // Replace the defualt GitHub image for matching repos below (images imported above - lines 7-8)
 export const projectCardImages = [
   {
-    name: "example-1",
-    image: Logo,
-  },
-  {
+    displayName: "Booki",
     name: "projet_booki",
     image: Booki,
   },
   {
+    displayName: "Mon Vieux Grimoire",
     name: "mon-vieux-grimoire",
     image: Grimoire,
   },
   {
+    displayName: "Nina Carducci Photographe",
     name: "Nina_Carducci_Photographe",
     image: Nina,
-  },  {
+  }, 
+  {
+    displayName: "Portfolio Sophie Bluel",
     name: "Portfolio-architecte-sophie-bluel",
     image: Sophie,
   },
   {
+    displayName: "Kasa",
     name: "kasa",
     image: Kasa,
   },
