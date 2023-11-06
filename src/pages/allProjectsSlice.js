@@ -1,5 +1,4 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-// Data
 import { githubUsername, projectCardImages } from "../data";
 
 const initialState = {

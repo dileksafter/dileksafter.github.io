@@ -16,6 +16,7 @@ import { Icon } from "@iconify/react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { Title, Loading } from "./globalStyledComponents";
 import StyledCard from "./StyledCard";
+import { projectCardImages } from "../data"
 
 export default function Projects() {
   const [mainProjects, setMainProjects] = React.useState([]);
@@ -75,12 +76,14 @@ export default function Projects() {
                   html_url,
                   homepage,
                 }) {
+                  const displayedName = (projectCardImages.find((item)=> item.name === name))?.displayName ?? name
                   if (name === "dileksafter.github.io") return []
                   return (
                     <Col key={id}>
                       <StyledCard
                         image={image}
-                        name={name}
+                        name={displayedName}
+                        path={name}
                         description={description}
                         url={html_url}
                         demo={homepage}

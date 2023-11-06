@@ -4,14 +4,10 @@ import { useAppContext } from "../appContext";
 import { Link as ScrollLink } from "react-scroll";
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
-// Icons
 import { Icon } from "@iconify/react";
-// Components
 import { Container, Nav, Navbar } from "react-bootstrap";
-// Images
 import Logo from "./defaultNavLogo.svg";
 
-// #region styled-components
 const StyledSwitch = styled.label`
   /* Slider pill */
   display: flex;
@@ -65,9 +61,7 @@ function ThemeToggle() {
     </StyledSwitch>
   );
 }
-// #endregion
 
-// #region component
 const propTypes = {
   Logo: PropTypes.node.isRequired,
 };

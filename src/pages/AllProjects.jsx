@@ -21,6 +21,7 @@ import {
 } from "../components/globalStyledComponents";
 import StyledCard from "../components/StyledCard";
 import Footer from "../components/Footer";
+import { projectCardImages } from "../data"
 
 const StyledSection = styled.section`
   min-height: calc(100vh - var(--min-footer-height) - var(--nav-height));
@@ -199,15 +200,17 @@ export default function AllProjects() {
                       html_url,
                       homepage,
                     }) {
+                      const displayedName = (projectCardImages.find((item)=> item.name === name))?.displayName ?? name
                       if (name === "dileksafter.github.io") return []
                       return (
                         <Col key={id}>
                           <StyledCard
                             image={image}
-                            name={name}
+                            name={displayedName}
                             description={description}
                             url={html_url}
                             demo={homepage}
+                            path={name}
                           />
                         </Col>
                       );
@@ -220,15 +223,17 @@ export default function AllProjects() {
                       html_url,
                       homepage,
                     }) {
+                      const displayedName = (projectCardImages.find((item)=> item.name === name))?.displayName ?? name
                       if (name === "dileksafter.github.io") return []
                       return (
                         <Col key={id}>
                           <StyledCard
                             image={image}
-                            name={name}
+                            name={displayedName}
                             description={description}
                             url={html_url}
                             demo={homepage}
+                            path={name}
                           />
                         </Col>
                       );

@@ -1,8 +1,6 @@
 import React from "react";
 import { useAppContext } from "../appContext";
-// Data
 import { formspreeUrl } from "../data";
-// Components
 import { Alert, Button, Form, Spinner } from "react-bootstrap";
 
 export default function ContactForm() {

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-// Components
 import SocialLinks from "./SocialLinks";
 
 const StyledFooter = styled.footer`
